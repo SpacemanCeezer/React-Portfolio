@@ -13,9 +13,11 @@ const Navigation = () => {
 };
 
 const navStyle = {
-  background: '#444',
+  background: '#333',
   padding: '1rem',
   textAlign: 'center',
+  border: '2px solid black', 
+  borderRadius: '5px',
 };
 
 const linkStyle = {

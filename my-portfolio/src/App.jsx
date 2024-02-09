@@ -1,4 +1,3 @@
-// App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
@@ -8,7 +7,7 @@ import Portfolio from './components/Portfolio';
 import Contact from './components/ContactMe';
 import Resume from './components/Resume';
 import './App.css';
-import './ContactMe.css';
+import './profile.css';
 
 const App = () => {
   return (

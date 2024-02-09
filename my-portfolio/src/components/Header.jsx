@@ -1,19 +1,13 @@
 import React from 'react';
+import '../App.css'; 
 
-const Header = () => {
+const App = () => {
   return (
-    <header style={headerStyle}>
-      <h1>Developer's Name</h1>
-      {/* Navigation component will be added here */}
-    </header>
+    <div className="App">
+      <header className="header">Cesar Castro</header>
+      {/* Add other components and content here */}
+    </div>
   );
 };
 
-const headerStyle = {
-  background: '#333',
-  color: '#fff',
-  padding: '1rem',
-  textAlign: 'center',
-};
-
-export default Header;
+export default App;
