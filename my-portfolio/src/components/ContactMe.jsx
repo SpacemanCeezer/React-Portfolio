@@ -3,6 +3,8 @@ import '../profile.css';
 import yourImage from '../assets/gon.webp'; 
 import emailIcon from '../assets/email.png'; 
 import linkedinIcon from '../assets/linkedin.png';
+import githubIcon from '../assets/github.png'; 
+
 const ContactMe = () => {
   return (
     <div className="contact-me-container">
@@ -15,7 +17,7 @@ const ContactMe = () => {
           <span>Contact Me</span>
         </div>
         <div className="social-media">
-        <a href="mailto:cesarocastro321@gmail.com" title="Email">
+          <a href="mailto:cesarocastro321@gmail.com" title="Email">
             <img src={emailIcon} alt="Email" />
             <span className="tooltip-social">Email</span>
           </a>
@@ -23,7 +25,11 @@ const ContactMe = () => {
             <img src={linkedinIcon} alt="LinkedIn" />
             <span className="tooltip-social">LinkedIn</span>
           </a>
-              </div>
+          <a href="https://github.com/SpacemanCeezer" title="GitHub">
+            <img src={githubIcon} alt="GitHub" />
+            <span className="tooltip-social">GitHub</span>
+          </a>
+        </div>
       </div>
     </div>
   );
