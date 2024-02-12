@@ -5,7 +5,7 @@ import gamehub from '../assets/gamehub.png';
 const Portfolio = () => {
   return (
     <section>
-      <h2>Portfolio</h2>
+      <h2 className="portfolio-heading">Portfolio</h2>
       <div className="project-container">
         <div className="project">
           <a href="https://recipeasy-7c2ada1905ec.herokuapp.com">

@@ -6,13 +6,13 @@ const AboutMe = () => {
     <div style={containerStyle}>
       <img src={profileImage} alt="Profile" style={imageStyle} />
       <h2>About Me</h2>
-      <p>Hey there, I'm a web developer with a solid background in military service. Transitioning from the military to the world of web development might seem like a leap, but it's one that I've embraced with enthusiasm.</p>
+          <p>My journey into web development began with a desire to channel my technical skills and creative energy into meaningful projects.</p>
+          <p> Through self-study, intensive training programs, and real-world experience, I've honed my abilities in HTML, CSS, JavaScript, React, and beyond.</p>
+          <p>In addition to my technical skills, I bring strong communication skills, teamwork, and leadership experience cultivated during my service.</p>
+          <p> I understand the importance of clear communication, adaptability, and staying calm under pressure – qualities that are invaluable in the fast-paced world of web development.</p>
 
-<p>I pride myself on my attention to detail and problem-solving skills, traits that I honed during my time in service. Web development allows me to combine my love for technology with my passion for creating practical solutions.</p>
-
-<p>Outside of coding, you can find me enjoying the outdoors, exploring new hiking trails, or catching up on the latest tech trends. Let's connect and see how we can collaborate on some exciting projects!</p>
-
-      
+          <p>I am excited about the opportunity to bring my unique perspective and skill set to your team, contributing to innovative projects and driving success in a collaborative environment.</p>
+          <p> Let's connect and explore how my background and expertise can help achieve your company's goals.</p>
       
     </div>
   );

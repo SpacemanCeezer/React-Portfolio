@@ -1,10 +1,15 @@
 import React from 'react';
+import pdf from '../assets/Cesar_Castro_Resume.pdf';
+import resume from '../assets/resume.png';
 
 const Resume = () => {
   return (
-    <section>
+    <section className="resume-section">
       <h2>Resume</h2>
-      {/* Add content for Resume section */}
+      <div className="resume-content">
+        <img src={resume} alt="Resume Preview" />
+        <a href={pdf} target="_blank" rel="noopener noreferrer" className="resume-download-button">Download Resume</a>
+      </div>
     </section>
   );
 };

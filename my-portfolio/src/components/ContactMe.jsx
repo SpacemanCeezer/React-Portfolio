@@ -17,7 +17,7 @@ const ContactMe = () => {
           <span>Contact Me</span>
         </div>
         <div className="social-media">
-          <a href="mailto:cesarocastro321@gmail.com" title="Email">
+          <a href="mailto:cesarocastro115@gmail.com" title="Email">
             <img src={emailIcon} alt="Email" />
             <span className="tooltip-social">Email</span>
           </a>
