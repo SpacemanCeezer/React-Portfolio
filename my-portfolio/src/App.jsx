@@ -6,27 +6,25 @@ import AboutMe from './components/AboutMe';
 import Portfolio from './components/Portfolio';
 import Contact from './components/ContactMe';
 import Resume from './components/Resume';
+import Footer from './components/Footer';
 import './App.css';
 import './profile.css';
 
 const App = () => {
   return (
     <Router>
-      
-        <Header />
-        <Navigation />
-        <Routes>
-          <Route path="/about-me" element={<AboutMe />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/" element={<AboutMe />} />
-        </Routes>
-      
+      <Header />
+      <Navigation />
+      <Routes>
+        <Route path="/about-me" element={<AboutMe />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/resume" element={<Resume />} />
+        <Route path="/" element={<AboutMe />} />
+      </Routes>
+      <Footer /> 
     </Router>
   );
 };
-
-
 
 export default App;
