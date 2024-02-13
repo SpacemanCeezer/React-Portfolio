@@ -112,9 +112,53 @@
   opacity: 1;
   transform: translate(-50%, -130%);
 }
+
 .contact-me-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh; 
+}
+
+.contact-form {
+  background: #547246;
+  width: 13rem;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 4px solid #dac17c;
+  box-shadow: 0 6px 10px rgb(233, 98, 20);
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  font-family: 'Roboto Slab', sans-serif;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.contact-form:hover {
+  transform: translateY(-10px);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: calc(100% - 16px); /* Adjusted width to account for padding and border */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.error-message {
+  color: red;
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../profile.css'; 
 import yourImage from '../assets/gon.webp'; 
 import emailIcon from '../assets/email.png'; 
@@ -6,6 +6,41 @@ import linkedinIcon from '../assets/linkedin.png';
 import githubIcon from '../assets/github.png'; 
 
 const ContactMe = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [nameError, setNameError] = useState('');
+  const [emailError, setEmailError] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!name) {
+      setNameError('Name is required');
+    } else {
+      setNameError('');
+    }
+    if (!email) {
+      setEmailError('Email is required');
+    } else if (!isValidEmail(email)) {
+      setEmailError('Invalid email address');
+    } else {
+      setEmailError('');
+    }
+    if (name && email && isValidEmail(email)) {
+      console.log('Name:', name);
+      console.log('Email:', email);
+      console.log('Message:', message);
+      setName('');
+      setEmail('');
+      setMessage('');
+    }
+  };
+
+  const isValidEmail = (value) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(value);
+  };
+
   return (
     <div className="contact-me-container">
       <div className="card-client">
@@ -30,6 +65,41 @@ const ContactMe = () => {
             <span className="tooltip-social">GitHub</span>
           </a>
         </div>
+      </div>
+      <div className="contact-form">
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              onBlur={() => !name && setNameError('Name is required')}
+            />
+            {nameError && <p className="error-message">{nameError}</p>}
+          </div>
+          <div className="form-group">
+            <label htmlFor="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              onBlur={() => !email && setEmailError('Email is required')}
+            />
+            {emailError && <p className="error-message">{emailError}</p>}
+          </div>
+          <div className="form-group">
+            <label htmlFor="message">Message:</label>
+            <textarea
+              id="message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            ></textarea>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
       </div>
     </div>
   );
