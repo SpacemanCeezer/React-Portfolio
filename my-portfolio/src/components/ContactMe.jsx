@@ -11,6 +11,7 @@ const ContactMe = () => {
   const [message, setMessage] = useState('');
   const [nameError, setNameError] = useState('');
   const [emailError, setEmailError] = useState('');
+  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -33,6 +34,7 @@ const ContactMe = () => {
       setName('');
       setEmail('');
       setMessage('');
+      setSubmitted(true);
     }
   };
 
@@ -100,6 +102,7 @@ const ContactMe = () => {
           </div>
           <button type="submit">Submit</button>
         </form>
+        {submitted && <p className="success-message">Form submitted successfully!</p>}
       </div>
     </div>
   );

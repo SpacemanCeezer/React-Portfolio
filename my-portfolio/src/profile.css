@@ -152,7 +152,7 @@ label {
 input[type="text"],
 input[type="email"],
 textarea {
-  width: calc(100% - 16px); /* Adjusted width to account for padding and border */
+  width: calc(100% - 16px); 
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -162,3 +162,4 @@ textarea {
 .error-message {
   color: red;
 }
+
